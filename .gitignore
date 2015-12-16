@@ -1,0 +1,7 @@
+.DS_Store
+*.swp
+*.tmp
+
+bin/
+pkg/
+vendor/src
