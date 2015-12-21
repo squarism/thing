@@ -14,8 +14,10 @@ func TestConfig(t *testing.T) {
 		log.Fatal(err)
 	}
 
-	c := new(Config)
-	c.Configure(fmt.Sprintf("%s/../../fixtures", pwd))
+	fixturesDirectory := fmt.Sprintf("%s/../../fixtures", pwd)
 
-	assert.Equal(t, "testtest", c.ProjectName)
+	c := new(Config)
+	c.Configure(fixturesDirectory)
+
+	assert.Equal(t, "thing_project", c.ProjectName)
 }
